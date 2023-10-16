@@ -1,0 +1,15 @@
+C:\Users\a_mer\source\repos\HMS\EntityLayer\bin\Debug\EntityLayer.dll.config
+C:\Users\a_mer\source\repos\HMS\EntityLayer\bin\Debug\EntityLayer.dll
+C:\Users\a_mer\source\repos\HMS\EntityLayer\bin\Debug\EntityLayer.pdb
+C:\Users\a_mer\source\repos\HMS\EntityLayer\bin\Debug\EntityFramework.dll
+C:\Users\a_mer\source\repos\HMS\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\a_mer\source\repos\HMS\EntityLayer\bin\Debug\EntityFramework.xml
+C:\Users\a_mer\source\repos\HMS\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\a_mer\source\repos\HMS\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\a_mer\source\repos\HMS\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\a_mer\source\repos\HMS\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
+C:\Users\a_mer\source\repos\HMS\EntityLayer\obj\Debug\EntityLayer.dll
+C:\Users\a_mer\source\repos\HMS\EntityLayer\obj\Debug\EntityLayer.pdb
+C:\Users\a_mer\source\repos\HMS\EntityLayer\bin\Debug\FastReport.Bars.dll
+C:\Users\a_mer\source\repos\HMS\EntityLayer\bin\Debug\FastReport.dll
+C:\Users\a_mer\source\repos\HMS\EntityLayer\bin\Debug\FastReport.Editor.dll

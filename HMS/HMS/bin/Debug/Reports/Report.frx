@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="01/21/2023 00:46:48" ReportInfo.Modified="01/21/2023 01:05:18" ReportInfo.CreatorVersion="2015.1.2.0">
+  <Dictionary>
+    <MsSqlDataConnection Name="Connection" ConnectionString="rijcmlqM7gJFg/iaLrqMhRfGy5lGsJ8tZpkOEa3G2OQXJapWrzYz3Unrx0ggmhVJwLUQ16Bj2C27/FB2GPiCKsxbNbb95VxlqM+856btznXEwJ6a3wHO8oUQ/LNK9v3LH7v/MO2XHh7jTHQUKw7lm8VT3fTZTxNKQmmNpd+aORnwRH41ebzmnx9InIlcv5IYh3Hb1U9PISz+uYoa/uBvRy17NPd7Q==">
+      <TableDataSource Name="Appointments" DataType="System.Int32" Enabled="true" TableName="Appointments">
+        <Column Name="appoID" DataType="System.Int32"/>
+        <Column Name="doctorID" DataType="System.Int32"/>
+        <Column Name="patientID" DataType="System.Int32"/>
+        <Column Name="date" DataType="System.DateTime"/>
+        <Column Name="dialog" DataType="System.String"/>
+        <Column Name="notes" DataType="System.String"/>
+        <Column Name="analysisReport" DataType="System.String"/>
+        <Column Name="diagnosis" DataType="System.String"/>
+        <Column Name="medicines" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Doctors" DataType="System.Int32" Enabled="true" TableName="Doctors">
+        <Column Name="doctorID" DataType="System.Int32"/>
+        <Column Name="doctorName" DataType="System.String"/>
+        <Column Name="doctorMail" DataType="System.String"/>
+        <Column Name="clinic" DataType="System.String"/>
+        <Column Name="doctorGender" DataType="System.String"/>
+        <Column Name="doctorAge" DataType="System.Int32"/>
+        <Column Name="doctorPhone" DataType="System.String"/>
+        <Column Name="doctorTCNO" DataType="System.String"/>
+        <Column Name="password" DataType="System.String"/>
+      </TableDataSource>
+      <TableDataSource Name="Patis" DataType="System.Int32" Enabled="true" TableName="Patis">
+        <Column Name="patientID" DataType="System.Int32"/>
+        <Column Name="patientName" DataType="System.String"/>
+        <Column Name="patientMail" DataType="System.String"/>
+        <Column Name="clinic" DataType="System.String"/>
+        <Column Name="patientGender" DataType="System.String"/>
+        <Column Name="patientBlood" DataType="System.String"/>
+        <Column Name="patientAge" DataType="System.Int32"/>
+        <Column Name="patientPhone" DataType="System.String"/>
+        <Column Name="patientTCNO" DataType="System.String"/>
+      </TableDataSource>
+    </MsSqlDataConnection>
+    <Relation Name="Doctors_Appointments" ParentDataSource="Doctors" ChildDataSource="Appointments" ParentColumns="doctorID" ChildColumns="doctorID" Enabled="true"/>
+    <Relation Name="Patis_Appointments" ParentDataSource="Patis" ChildDataSource="Appointments" ParentColumns="patientID" ChildColumns="patientID" Enabled="true"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="310">
+    <ReportTitleBand Name="ReportTitle1" Width="1096.2" Height="75.6">
+      <TextObject Name="Text2" Left="18.9" Top="47.25" Width="103.95" Height="18.9" Text="AppointmentID: "/>
+      <TextObject Name="Text8" Left="992.25" Top="18.9" Width="94.5" Height="18.9" Text="Date:"/>
+      <TextObject Name="Text1" Left="113.4" Top="47.25" Width="103.95" Height="18.9" Text="[Appointments.appoID]"/>
+      <TextObject Name="Text7" Left="992.25" Top="47.25" Width="94.5" Height="18.9" Text="[Appointments.date]" Format="Date" Format.Format="d"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="79.6" Width="1096.2" Border.Lines="Top" Border.TopLine.Width="4"/>
+    <DataBand Name="Data1" Top="83.6" Width="1096.2" Height="415.8" DataSource="Appointments">
+      <TextObject Name="Text3" Left="141.75" Top="103.95" Width="94.5" Height="18.9" Text="[Appointments.Doctors.doctorName]"/>
+      <TextObject Name="Text5" Left="963.9" Top="103.95" Width="94.5" Height="18.9" Text="[Appointments.Patis.patientName]"/>
+      <TextObject Name="Text4" Left="28.35" Top="103.95" Width="94.5" Height="18.9" Text="doctorName"/>
+      <TextObject Name="Text6" Left="850.5" Top="103.95" Width="94.5" Height="18.9" Text="patientName"/>
+      <TextObject Name="Text19" Left="141.75" Top="66.15" Width="94.5" Height="18.9" Text="[Appointments.Doctors.doctorID]"/>
+      <TextObject Name="Text20" Left="28.35" Top="66.15" Width="94.5" Height="18.9" Text="doctorID"/>
+      <TextObject Name="Text21" Left="141.75" Top="141.75" Width="94.5" Height="18.9" Text="[Appointments.Doctors.doctorMail]"/>
+      <TextObject Name="Text22" Left="28.35" Top="141.75" Width="94.5" Height="18.9" Text="doctorMail"/>
+      <TextObject Name="Text23" Left="141.75" Top="179.55" Width="94.5" Height="18.9" Text="[Appointments.Doctors.clinic]"/>
+      <TextObject Name="Text25" Left="141.75" Top="217.35" Width="94.5" Height="18.9" Text="[Appointments.Doctors.doctorGender]"/>
+      <TextObject Name="Text24" Left="28.35" Top="179.55" Width="94.5" Height="18.9" Text="clinic"/>
+      <TextObject Name="Text26" Left="28.35" Top="217.35" Width="94.5" Height="18.9" Text="doctorGender"/>
+      <TextObject Name="Text27" Left="963.9" Top="66.15" Width="94.5" Height="18.9" Text="[Appointments.Patis.patientID]"/>
+      <TextObject Name="Text28" Left="850.5" Top="66.15" Width="94.5" Height="18.9" Text="patientID"/>
+      <TextObject Name="Text29" Left="963.9" Top="141.75" Width="94.5" Height="18.9" Text="[Appointments.Patis.patientMail]"/>
+      <TextObject Name="Text31" Left="963.9" Top="179.55" Width="94.5" Height="18.9" Text="[Appointments.Patis.clinic]"/>
+      <TextObject Name="Text30" Left="850.5" Top="141.75" Width="94.5" Height="18.9" Text="patientMail"/>
+      <TextObject Name="Text32" Left="850.5" Top="179.55" Width="94.5" Height="18.9" Text="clinic"/>
+      <TextObject Name="Text33" Left="963.9" Top="217.35" Width="94.5" Height="18.9" Text="[Appointments.Patis.patientGender]"/>
+      <TextObject Name="Text34" Left="850.5" Top="217.35" Width="103.95" Height="18.9" Text="patientGender"/>
+      <TextObject Name="Text35" Left="963.9" Top="255.15" Width="94.5" Height="18.9" Text="[Appointments.Patis.patientBlood]"/>
+      <TextObject Name="Text36" Left="850.5" Top="255.15" Width="94.5" Height="18.9" Text="patientBlood"/>
+      <TextObject Name="Text37" Left="963.9" Top="292.95" Width="94.5" Height="18.9" Text="[Appointments.Patis.patientAge]"/>
+      <TextObject Name="Text38" Left="850.5" Top="292.95" Width="94.5" Height="18.9" Text="patientAge"/>
+      <TextObject Name="Text39" Left="963.9" Top="330.75" Width="94.5" Height="18.9" Text="[Appointments.Patis.patientPhone]"/>
+      <TextObject Name="Text40" Left="850.5" Top="330.75" Width="94.5" Height="18.9" Text="patientPhone"/>
+      <TextObject Name="Text41" Left="963.9" Top="368.55" Width="94.5" Height="18.9" Text="[Appointments.Patis.patientTCNO]"/>
+      <TextObject Name="Text42" Left="850.5" Top="368.55" Width="94.5" Height="18.9" Text="patientTCNO"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="503.4" Width="1096.2" Height="274.05">
+      <TextObject Name="Text11" Left="689.85" Top="37.8" Width="189" Height="151.2" Text="[Appointments.notes]"/>
+      <TextObject Name="Text13" Left="897.75" Top="37.8" Width="189" Height="151.2" Text="[Appointments.analysisReport]"/>
+      <TextObject Name="Text15" Left="689.85" Top="236.25" Width="189" Height="28.35" Text="[Appointments.diagnosis]"/>
+      <TextObject Name="Text17" Left="897.75" Top="236.25" Width="189" Height="28.35" Text="[Appointments.medicines]"/>
+      <TextObject Name="Text9" Left="28.35" Top="56.7" Width="368.55" Height="198.45" Text="[Appointments.dialog]"/>
+      <TextObject Name="Text10" Left="28.35" Top="18.9" Width="94.5" Height="18.9" Text="dialog"/>
+      <TextObject Name="Text12" Left="689.85" Top="9.45" Width="94.5" Height="18.9" Text="notes"/>
+      <TextObject Name="Text14" Left="878.85" Top="9.45" Width="103.95" Height="18.9" Text="analysisReport"/>
+      <TextObject Name="Text16" Left="689.85" Top="217.35" Width="94.5" Height="18.9" Text="diagnosis"/>
+      <TextObject Name="Text18" Left="897.75" Top="217.35" Width="94.5" Height="18.9" Text="medicines"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>
